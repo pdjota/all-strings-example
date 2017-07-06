@@ -10,6 +10,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { HttpModule, Http } from '@angular/http';
 
+export function httpFactory(http) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -21,7 +25,7 @@ import { HttpModule, Http } from '@angular/http';
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
-                useFactory: (http) => new TranslateHttpLoader(http, './assets/i18n/', '.json'),
+                useFactory: httpFactory,
                 deps: [Http],
             }
         }),

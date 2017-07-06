@@ -26,7 +26,24 @@ with keys values for some strings "application.name"
   - en.json Eat at Joe
   - es.json Coma en Joe
 
-4. Configure Module for Root with a loader, using the Http loader (Later fix AOT).
+4. Configure Module for Root with a loader, using the Http loader. Adapt the call for AOT
+```bash
+ERROR in ./src/app/app.module.ts
+Module parse failed: /home/pablo/projects/all-strings-example/node_modules/@ngtools/webpack/src/index.js!/home/pablo/projects/all-strings-example/src/app/app.module.ts Unexpected token (15:9)
+You may need an appropriate loader to handle this file type.
+| import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+| import { HttpModule, Http } from '@angular/http';
+| function (http) {
+|     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+| }
+```
+
+```typescript
+function httpFactory(http) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+```
+
 5. Use a translation pipe in a string:
     'application.title' | translate 
     (Check the application that has shows the label)
