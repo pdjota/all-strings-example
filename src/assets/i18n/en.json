@@ -1,3 +1,10 @@
 {
-    "application.title": "Eat at Joe"
+	"application.tagline": "All the strings require translation",
+	"application.title": "Eat at Joe",
+	"application.action.select.product": "Selected Product",
+	"application.copyright": "Copyright &copy; 2017. All rights reserved",
+    "product.sku": "SKU #",
+    "product.item": "Item name",
+    "product.price": "Price EUR",
+    "product.date": "Date"
 }

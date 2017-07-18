@@ -6,6 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "extract": "ngx-translate-extract -i ./src/app -o ./src/assets/i18n/en.json ./src/assets/i18n/es.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -33,6 +34,7 @@
     "@angular/cli": "1.1.0",
     "@angular/compiler-cli": "^4.2.5",
     "@angular/language-service": "^4.2.5",
+    "@biesbjerg/ngx-translate-extract": "^2.3.2",
     "@types/jasmine": "2.5.45",
     "@types/node": "^6.0.79",
     "codelyzer": "~3.0.1",

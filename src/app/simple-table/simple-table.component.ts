@@ -14,9 +14,12 @@ export class SimpleTableComponent {
     ];
 
     columns: ITdDataTableColumn[] = [
-        { name: 'sku', label: 'SKU #' },
-        { name: 'item', label: 'Item name' },
-        { name: 'price', label: 'Price (EUR)', numeric: true, format: v => v.toFixed(2) },
-        { name: 'date', label: 'Date' }
-    ];
+        { name: 'sku', label: 'product.sku' },
+        { name: 'item', label: 'product.item' },
+        { name: 'price', label: 'product.price', numeric: true, format: v => v.toFixed(2) },
+        { name: 'date', label: 'product.date' }
+    ].map( col => {
+         col.label = col.label;
+         return col;
+    });
 }

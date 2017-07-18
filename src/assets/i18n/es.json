@@ -1,3 +1,6 @@
 {
-    "application.title": "Coma en Joe"
+	"application.tagline": "",
+	"application.title": "Coma en Joe",
+	"application.action.select.product": "",
+	"application.copyright": ""
 }
